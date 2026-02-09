@@ -1,0 +1,487 @@
+<div class="page" id="page-sop">
+    <div class="page-header">
+        <h1 class="page-title">LSPD Handbook</h1>
+        <p class="page-subtitle">VLD Roleplay - Los Santos Police Department</p>
+    </div>
+
+    <!-- Layout Container -->
+    <div class="sop-layout">
+
+        <!-- Sidebar Navigation -->
+        <aside class="sop-sidebar">
+            <a class="sop-toc-link" ng-click="setSection('intro')"
+                ng-class="{'active': isActive('intro')}">Introduction</a>
+            <a class="sop-toc-link" ng-click="setSection('standards')"
+                ng-class="{'active': isActive('standards')}">Professional Standards</a>
+            <a class="sop-toc-link" ng-click="setSection('oath')" ng-class="{'active': isActive('oath')}">Oath of
+                Office</a>
+            <a class="sop-toc-link" ng-click="setSection('admin')"
+                ng-class="{'active': isActive('admin')}">Administrative Policies</a>
+            <a class="sop-toc-link" ng-click="setSection('chain')" ng-class="{'active': isActive('chain')}">Chain of
+                Command</a>
+            <a class="sop-toc-link" ng-click="setSection('legal')" ng-class="{'active': isActive('legal')}">Legal
+                Framework</a>
+            <a class="sop-toc-link" ng-click="setSection('traffic')" ng-class="{'active': isActive('traffic')}">Traffic
+                Procedures</a>
+            <a class="sop-toc-link" ng-click="setSection('force')" ng-class="{'active': isActive('force')}">Use of
+                Force</a>
+            <a class="sop-toc-link" ng-click="setSection('pursuits')"
+                ng-class="{'active': isActive('pursuits')}">Vehicle Pursuits</a>
+            <a class="sop-toc-link" ng-click="setSection('comms')"
+                ng-class="{'active': isActive('comms')}">Communications</a>
+            <a class="sop-toc-link" ng-click="setSection('gangs')" ng-class="{'active': isActive('gangs')}">Gang
+                Situations</a>
+            <a class="sop-toc-link" ng-click="setSection('ems')" ng-class="{'active': isActive('ems')}">EMS
+                Interactions</a>
+            <a class="sop-toc-link" ng-click="setSection('negotiation')"
+                ng-class="{'active': isActive('negotiation')}">Negotiation & Breach</a>
+            <a class="sop-toc-link" ng-click="setSection('custody')" ng-class="{'active': isActive('custody')}">Custody
+                Operations</a>
+            <a class="sop-toc-link" ng-click="setSection('evidence')"
+                ng-class="{'active': isActive('evidence')}">Evidence & Warrants</a>
+            <a class="sop-toc-link" ng-click="setSection('reports')"
+                ng-class="{'active': isActive('reports')}">Reports</a>
+            <a class="sop-toc-link" ng-click="setSection('auth')"
+                ng-class="{'active': isActive('auth')}">Authorization</a>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="sop-main">
+
+            <!-- Introduction -->
+            <div class="sop-section" ng-show="isActive('intro')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">🚔</div>
+                        <h2 class="sop-title">Introduction</h2>
+                    </div>
+                    <div class="sop-content">
+                        <p>The Los Santos Police Department is the heartbeat of law enforcement in the vibrant and
+                            dynamic city of Los Santos. As an officer of the LSPD, you are entrusted with the crucial
+                            responsibility of maintaining peace, upholding the law, and serving the community with
+                            integrity and professionalism.</p>
+                        <p>Our Mission: To Protect and Serve. We strive to ensure the safety, security, and well-being
+                            of all residents and visitors of Los Santos through dedicated law enforcement and proactive
+                            community engagement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Standards -->
+            <div class="sop-section" ng-show="isActive('standards')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">⚖️</div>
+                        <h2 class="sop-title">Professional Standards</h2>
+                    </div>
+                    <div class="sop-content">
+                        <p>Officers are expected to display the following attributes:</p>
+                        <ul>
+                            <li><strong>Specialized Knowledge:</strong> Maintaining currency on all SOPs, policies, and
+                                laws.</li>
+                            <li><strong>Competency:</strong> Reliable, efficient, and solution-oriented.</li>
+                            <li><strong>Honesty and Integrity:</strong> Uncompromising values and humility.</li>
+                            <li><strong>Accountability:</strong> Taking responsibility for mistakes.</li>
+                            <li><strong>Self-Regulation:</strong> Composure under pressure and emotional intelligence.
+                            </li>
+                            <li><strong>Appearance:</strong> Kempt uniform and professional carriage.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Oath -->
+            <div class="sop-section" ng-show="isActive('oath')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">✋</div>
+                        <h2 class="sop-title">Oath of Office</h2>
+                    </div>
+                    <div class="sop-content">
+                        <blockquote
+                            style="font-style: italic; border-left: 3px solid var(--accent-primary); padding-left: 1rem;">
+                            "I, [Name], do solemnly swear (or affirm) that I will support and defend the Constitution of
+                            the State of San Andreas against all enemies, foreign and domestic; that I will bear true
+                            faith and allegiance to the Constitution of the State of San Andreas; that I take this
+                            obligation freely, without any mental reservation or purpose of evasion, and that I will
+                            well and faithfully discharge the duties of the office upon which I am about to enter."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Administrative Policies -->
+            <div class="sop-section" ng-show="isActive('admin')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">📋</div>
+                        <h2 class="sop-title">Administrative Policies</h2>
+                    </div>
+                    <div class="sop-content">
+                        <h3>Ride-Alongs</h3>
+                        <p>Civilians must submit a Statement of Interest and be screened. Only Command/HighCommand/FTO
+                            Lead can approve.</p>
+                        <ul>
+                            <li>Civilians wear white/gray tactical vest. No PD uniforms.</li>
+                            <li>Do not interfere, speak at incidents, or use radio.</li>
+                            <li>Stay in vehicle unless instructed.</li>
+                        </ul>
+
+                        <h3>Departmental Transfers</h3>
+                        <p>Requires formal written request, review by current Head, and approval by receiving Department
+                            Head.</p>
+
+                        <h3>Disciplinary Actions</h3>
+                        <ul>
+                            <li>1st Action: Warning</li>
+                            <li>2nd Action: LEO /13 (Repeated infractions)</li>
+                            <li>3rd Action: Summons + 12-24 Hour Suspension</li>
+                            <li>4th Action: 3/3 Strike + Termination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chain of Command -->
+            <div class="sop-section" ng-show="isActive('chain')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">🎖️</div>
+                        <h2 class="sop-title">Chain of Command</h2>
+                    </div>
+                    <div class="sop-content">
+                        <ul>
+                            <li>Highest Authority Board</li>
+                            <li>Chief of Police</li>
+                            <li>Asst. Chief of Police</li>
+                            <li>Deputy Chief of Police</li>
+                            <li>Captain</li>
+                            <li>Lieutenant</li>
+                            <li>Head Sergeant</li>
+                            <li>Sergeant</li>
+                            <li>Corporal Officer</li>
+                            <li>Senior Officer</li>
+                            <li>Officer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Framework -->
+            <div class="sop-section" ng-show="isActive('legal')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">📜</div>
+                        <h2 class="sop-title">Legal Framework</h2>
+                    </div>
+                    <div class="sop-content">
+                        <h3>Miranda Rights</h3>
+                        <p class="highlight-box">
+                            “You have the right to remain silent. Anything that you say or do will be used against you
+                            in a court of law. You have the right to an attorney if available. If you cannot afford one,
+                            one will be appointed to you free of charge by the State. Do you understand these rights as
+                            I have read them to you, Sir/Ma’am?”
+                        </p>
+                        <p>Must be read prior to custodial interrogation. Failure leads to inadmissibility of
+                            statements.</p>
+
+                        <h3>Definitions</h3>
+                        <ul>
+                            <li><strong>Reasonable Suspicion:</strong> Reasonable presumption a crime has occurred.
+                                Grounds for detainment.</li>
+                            <li><strong>Probable Cause:</strong> Logical belief supported by facts that a crime has
+                                occurred. Grounds for arrest/search.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traffic Stops -->
+            <div class="sop-section" ng-show="isActive('traffic')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">🚗</div>
+                        <h2 class="sop-title">Traffic Stop Procedures</h2>
+                    </div>
+                    <div class="sop-content">
+                        <h3>Standard Stop</h3>
+                        <ol>
+                            <li>Initiate stop with lights/sirens. Notify Dispatch of location and vehicle.</li>
+                            <li>Position vehicle 1-2 car lengths behind, angled 45 degrees.</li>
+                            <li>Approach with caution. Touch trunk.</li>
+                            <li>Identify self, request License/Registration/Insurance.</li>
+                            <li>Run checks. Issue citation or warning.</li>
+                            <li>Clear stop: "Dispatch, show my traffic Code 4."</li>
+                        </ol>
+
+                        <h3>Felony Stop</h3>
+                        <p>For stolen vehicles or warrants. High risk.</p>
+                        <ol>
+                            <li>Wait for backup if possible.</li>
+                            <li>Hold suspect at gunpoint. Commands: "Engine off, keys out window".</li>
+                            <li>Order driver out, backwards, hands up. Secure driver first.</li>
+                            <li>Secure passengers one by one.</li>
+                            <li>Clear vehicle trunk.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Use of Force -->
+            <div class="sop-section" ng-show="isActive('force')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">🛡️</div>
+                        <h2 class="sop-title">Use of Force Continuum</h2>
+                    </div>
+                    <div class="sop-content">
+                        <div class="force-continuum">
+                            <div class="force-level level-1">
+                                <span class="force-name">Level 1: Officer Presence</span>
+                                <span class="force-desc">Visual deterrence, professional attitude.</span>
+                            </div>
+                            <div class="force-level level-2">
+                                <span class="force-name">Level 2: Verbalization</span>
+                                <span class="force-desc">Calm commands, increasing volume if needed.</span>
+                            </div>
+                            <div class="force-level level-3">
+                                <span class="force-name">Level 3: Empty Hand Control</span>
+                                <span class="force-desc">Soft (holds) and Hard (strikes) techniques.</span>
+                            </div>
+                            <div class="force-level level-4">
+                                <span class="force-name">Level 4: Less-Lethal</span>
+                                <span class="force-desc">Baton, Pepper Spray, Taser.</span>
+                            </div>
+                            <div class="force-level level-5">
+                                <span class="force-name">Level 5: Lethal Force</span>
+                                <span class="force-desc">Firearm. Defense of life only.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vehicle Pursuits -->
+            <div class="sop-section" ng-show="isActive('pursuits')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">💨</div>
+                        <h2 class="sop-title">Vehicle Pursuits</h2>
+                    </div>
+                    <div class="sop-content">
+                        <p><strong>Primary Unit:</strong> Focuses on driving. Updates on hazards.</p>
+                        <p><strong>Secondary Unit:</strong> Handles Comms. Updates location/speed/conditions.</p>
+                        <p><strong>Tertiary Unit:</strong> Proactive maneuvers (Boxing, etc).</p>
+
+                        <h3>Intervention Tactics</h3>
+                        <ul>
+                            <li><strong>PIT:</strong> Requires Senior LEO approval. Not on motorcycles.</li>
+                            <li><strong>Spikes:</strong> Preemptive or during pursuit. Requires Senior LEO approval.
+                            </li>
+                            <li><strong>Lethal:</strong> Last resort. Requires authorization.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Codes & Comms -->
+            <div class="sop-section" ng-show="isActive('comms')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">📡</div>
+                        <h2 class="sop-title">Communications & Codes</h2>
+                    </div>
+                    <div class="sop-content">
+                        <div class="table-responsive">
+                            <table class="sop-table">
+                                <thead>
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Meaning</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Code 1</td>
+                                        <td>No lights/sirens (Low priority)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Code 2</td>
+                                        <td>Lights/Intermittent sire (Urgent)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Code 3</td>
+                                        <td>Lights & Sirens (Emergency)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Code 4</td>
+                                        <td>Situation Under Control / All Clear</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Common Phrasing:</strong> "Dispatch, callsign. Show me 10-8." (Available)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gang War Situations -->
+            <div class="sop-section" ng-show="isActive('gangs')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">🔫</div>
+                        <h2 class="sop-title">Gang War Situations</h2>
+                    </div>
+                    <div class="sop-content">
+                        <h3>City Situation</h3>
+                        <ul>
+                            <li>Establish perimeter and evacuate civilians.</li>
+                            <li>Repeated warnings to cease conflict.</li>
+                            <li>Intervene if conflict continues.</li>
+                            <li>If agreement to leave: Allow exit, but bodies/evidence remain.</li>
+                        </ul>
+                        <h3>Outside City (Sandy/Paleto)</h3>
+                        <ul>
+                            <li>Establish perimeter and gather evidence (Air-1/Cameras).</li>
+                            <li><strong>Non-Interference Policy:</strong> Monitor only. Do not engage.</li>
+                            <li>Post-Conflict: Process scene, treat injuries, collect evidence.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EMS Interactions -->
+            <div class="sop-section" ng-show="isActive('ems')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">🚑</div>
+                        <h2 class="sop-title">EMS Interactions</h2>
+                    </div>
+                    <div class="sop-content">
+                        <ul>
+                            <li>Ensure scene is <strong>Code 4</strong> before EMS entry.</li>
+                            <li>Do not rush EMS. They determine transport needs.</li>
+                            <li>Suspects must be searched prior to transport.</li>
+                            <li>LEO escort required for suspect/LEO transport.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Negotiation & Breaching -->
+            <div class="sop-section" ng-show="isActive('negotiation')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">🤝</div>
+                        <h2 class="sop-title">Negotiation & Breaching</h2>
+                    </div>
+                    <div class="sop-content">
+                        <h3>Negotiation</h3>
+                        <p>Identify suspects/hostages and demands. <strong>Never exchange:</strong> Police equipment,
+                            vehicles, or prisoners.</p>
+                        <p>Priority is safety of all individuals.</p>
+
+                        <h3>Breaching</h3>
+                        <p>Authorized when: Negotiations fail, lives at stake, or verbal contact lost.</p>
+                        <div class="step-list">
+                            <div class="step-item"><span class="step-num">1</span> <span class="step-text">Assign teams
+                                    (Left, Right, Long).</span></div>
+                            <div class="step-item"><span class="step-num">2</span> <span class="step-text">Call:
+                                    "Callsign Ready" -> "Set" -> "BREACH".</span></div>
+                            <div class="step-item"><span class="step-num">3</span> <span
+                                    class="step-text"><strong>Button Hook Entry:</strong> Stack on opposite sides,
+                                    clearer enters their side/blind spots.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custody Operations -->
+            <div class="sop-section" ng-show="isActive('custody')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">🔒</div>
+                        <h2 class="sop-title">Custody Operations</h2>
+                    </div>
+                    <div class="sop-content">
+                        <h3>Booking</h3>
+                        <ol>
+                            <li>Place in cell. Remove restraints only when locked.</li>
+                            <li>Secondary search. Remove contraband.</li>
+                            <li>Fingerprint & Mugshot if needed (Waist up, no face coverings).</li>
+                            <li>Draft charges. Read Miranda if not done.</li>
+                            <li>Right to Attorney: Attempt contact.</li>
+                        </ol>
+                        <h3>Transport</h3>
+                        <p>Notify DOC on Radio Channel 5 with Prisoner Name, Description, Time.</p>
+                        <p>If DOC unavailable: Transport to Bolingbroke (Bus/Van) with escort.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evidence & Case Management -->
+            <div class="sop-section" ng-show="isActive('evidence')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">📦</div>
+                        <h2 class="sop-title">Evidence & Warrants</h2>
+                    </div>
+                    <div class="sop-content">
+                        <h3>Evidence Collection</h3>
+                        <ul>
+                            <li>Prevent contamination (Gloves).</li>
+                            <li>Photograph in place.</li>
+                            <li>Collect sample of all evidence.</li>
+                            <li>Submit: <strong>1.####</strong> (Arrest), <strong>2.####</strong> (Civilian),
+                                <strong>3.####</strong> (Investigation).</li>
+                        </ul>
+
+                        <h3>Search Warrants</h3>
+                        <p>Requires Probable Cause & Supervisor Approval. Valid for 30 days. Only seize listed items.
+                        </p>
+
+                        <h3>Arrest Warrants</h3>
+                        <ul>
+                            <li>Must be written immediately with existing evidence.</li>
+                            <li><strong>Validity:</strong> Must be created within 3 days of incident.</li>
+                            <li>Includes: Charges, fine, time, and issuing LEO.</li>
+                            <li>Void if not served during booking.</li>
+                        </ul>
+
+                        <h3>BOLO (Be On The Lookout)</h3>
+                        <p>Not an arrest warrant. Used for questioning/investigation awareness.</p>
+                        <p>Include vehicle plate or ID. Update associated reports when resolved.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reports -->
+            <div class="sop-section" ng-show="isActive('reports')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">📝</div>
+                        <h2 class="sop-title">Reports & Procedures</h2>
+                    </div>
+                    <div class="sop-content">
+                        <p>Reports must be written in third person, layman's terms (no 10-codes), and submitted within
+                            12-24 hours.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Authorization -->
+            <div class="sop-section" ng-show="isActive('auth')">
+                <div class="sop-card">
+                    <div class="sop-header">
+                        <div class="sop-icon">✍️</div>
+                        <h2 class="sop-title">Authorization</h2>
+                    </div>
+                    <div class="sop-content">
+                        <p><strong>Approved By:</strong> Deputy Chief Ray Holt</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
