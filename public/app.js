@@ -26,7 +26,7 @@ app.config(function ($routeProvider) {
         });
 });
 
-app.controller('MainController', function ($scope, $location, $timeout) {
+app.controller('MainController', function ($scope, $location, $timeout, $document) {
     // Initial State
     $scope.isBookOpen = false;
     $scope.searchQuery = '';
@@ -47,9 +47,91 @@ app.controller('MainController', function ($scope, $location, $timeout) {
     };
 
     $scope.closeBook = function () {
-        $scope.isBookOpen = false;
-        // Optionally reset route? No, keep it as is.
+        $timeout(function () {
+            $scope.isBookOpen = false;
+        });
     };
+
+    // Helper for scrolling
+    function scrollContent(amount) {
+        var content = document.querySelector('.main-content');
+        if (content) {
+            content.scrollTop += amount;
+        }
+    }
+
+    // Numpad Control System
+    $document.on('keydown', function (event) {
+        // Log key for debugging if needed
+        // console.log(event.code);
+
+        // Numpad Enter or Numpad Multiply (*) to Toggle Book
+        if (event.code === 'NumpadEnter' || event.code === 'NumpadMultiply') {
+            event.preventDefault();
+            $timeout(function () {
+                $scope.isBookOpen = !$scope.isBookOpen;
+            });
+            return;
+        }
+
+        // Only process other keys if book is open
+        if (!$scope.isBookOpen) return;
+
+        // Navigation Map
+        var navMap = {
+            'Numpad7': '/10-codes',
+            'Numpad9': '/penal-codes',
+            'Numpad1': '/amendments',
+            'Numpad3': '/miranda',
+            'Numpad5': '/sop'
+        };
+
+        if (navMap[event.code]) {
+            event.preventDefault();
+            $timeout(function () {
+                $location.path(navMap[event.code]);
+            });
+            return;
+        }
+
+        // Scrolling
+        if (event.code === 'Numpad8') { // Up
+            event.preventDefault();
+            scrollContent(-150); // Scroll Up
+        }
+        if (event.code === 'Numpad2') { // Down
+            event.preventDefault();
+            scrollContent(150); // Scroll Down
+        }
+
+        // Page Cycling (4 and 6)
+        var pages = ['/10-codes', '/penal-codes', '/amendments', '/miranda', '/sop'];
+        if (event.code === 'Numpad4' || event.code === 'Numpad6') {
+            event.preventDefault();
+            var currentPath = $location.path();
+            if (currentPath === '/') currentPath = '/10-codes';
+
+            var index = pages.indexOf(currentPath);
+            // If not found, default to 0
+            if (index === -1) index = 0;
+
+            var newIndex;
+            if (event.code === 'Numpad6') { // Next
+                newIndex = (index + 1) % pages.length;
+            } else { // Prev
+                newIndex = (index - 1 + pages.length) % pages.length;
+            }
+
+            $timeout(function () {
+                $location.path(pages[newIndex]);
+            });
+        }
+    });
+
+    // Clean up
+    $scope.$on('$destroy', function () {
+        $document.off('keydown');
+    });
 
     // Search Functionality
     $scope.handleSearch = function () {
